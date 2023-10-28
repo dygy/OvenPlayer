@@ -1,0 +1,110 @@
+@import "colors";
+
+/**
+ * @brief   Progressbar
+ * */
+
+.op-progressbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  margin-top: 10px;
+
+  .op-play-background-color {
+    background-color: @op-accent-color;
+  }
+
+  .op-progress-list {
+    cursor: pointer;
+    position: relative;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+
+    .op-load-progress,
+    .op-play-progress,
+    .op-hover-progress {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .op-play-progress {
+      width: 0;
+    }
+
+    .op-load-progress {
+      width: 0;
+      background-color: rgba(255, 255, 255, .5);
+    }
+
+    .op-hover-progress {
+      left: 0;
+      width: 0;
+      background-color: rgba(255, 255, 255, .6);
+    }
+
+  }
+
+  .op-progressbar-knob-container {
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+    .op-progressbar-knob {
+      width: 14px;
+      height: 14px;
+      border-radius: 7px;
+    }
+  }
+
+  .op-progressbar-time {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    left: auto;
+    width: auto;
+    background-color: rgba(28, 28, 28, 0.9);
+    border-radius: 2px;
+    padding: 5px 9px;
+    font-size: 0.8em;
+    line-height: 15px;
+    user-select: none;
+    white-space: nowrap;
+    opacity: 0.7;
+  }
+
+
+}
+
+.op-progressbar-hover .op-progressbar-time {
+  display: inline-block;
+}
+
+.op-on-error .op-progressbar-time {
+  display: none;
+}
+
+.op-progressbar-section-start,
+.op-progressbar-section-end {
+  display: none;
+  position: absolute;
+  width: 3px;
+  height: 14px;
+  bottom: -5px;
+  background-color: @op-accent-color;
+}
+
+.op-progressbar-preview {
+  position: absolute;
+  display: none;
+  bottom: 50px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  background-color: #000;
+  z-index: 9;
+}

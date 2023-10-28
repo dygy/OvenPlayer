@@ -1,0 +1,47 @@
+@import "colors";
+
+/**
+ * @brief   caption.
+ * */
+
+.op-caption-viewer {
+
+  .op-caption-text-container {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    padding: 0 12px;
+    text-align: center;
+    -moz-transition: bottom .25s cubic-bezier(0.0, 0.0, 0.2, 1);
+    -webkit-transition: bottom .25s cubic-bezier(0.0, 0.0, 0.2, 1);
+    transition: bottom .25s cubic-bezier(0.0, 0.0, 0.2, 1);
+
+    .op-caption-text {
+      color: #fff;
+      font-size: 1em;
+      line-height: 1.2em;
+      text-shadow: 2px 2px 2px gray;
+      padding: .1em .3em;
+      user-select: none;
+      word-break: break-word;
+      white-space: pre-line;
+      border: none;
+      background: none;
+    }
+  }
+}
+
+.op-caption-button {
+  width: 36px;
+}
+
+.op-caption-button > i {
+  font-size: 18px;
+  -moz-transition: color .25s cubic-bezier(0.0, 0.0, 0.2, 1);
+  -webkit-transition: color .25s cubic-bezier(0.0, 0.0, 0.2, 1);
+  transition: color .25s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.op-caption-active .op-caption-button > i {
+  color: #F36446;
+}
